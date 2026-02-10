@@ -1,6 +1,6 @@
 'use strict'
 
-import logger from "../utils/logge.js"
+import logger from "../utils/logger.js"
 import JsonStore from "./json-store.js";
 
 const appStore = {
