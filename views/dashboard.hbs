@@ -13,8 +13,20 @@
         <h3 class="ui header">
           {{title}}
         </h3>
-        <a href="/playlist/{{id}}"> View </a>
+        <p>
+          {{#if songs}}
+          <p>
+            Total songs: {{songs.length}}
+            </p>
+            <a href="/playlist/{{id}}">
+          <i class="icon folder open outline black"></i>
+        </a>
+          {{else}}
+            Empty playlist!
+          {{/if}}
+        </p>
       </section>
     {{/each}}
 
 </section>
+
