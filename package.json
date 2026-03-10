@@ -14,9 +14,11 @@
   "author": "Yaroslav Bezvesilnyi",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^2.2.2",
     "express": "^5.2.1",
     "express-handlebars": "^8.0.3",
     "lowdb": "^7.0.1",
+    "uuid": "^13.0.0",
     "winston": "^3.19.0"
   },
   "devDependencies": {

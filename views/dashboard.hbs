@@ -1,32 +1,5 @@
 {{> menu id="dashboard"}}
 
-<section class="ui left aligned middle aligned segment">
-  
-    <h2>Playlist App Dashboard</h2>
-    {{#unless playlists}}
-      <h3 class="ui message">
-        Start adding your playlists!
-      </h3>
-    {{/unless}}
-    {{#each playlists}}
-      <section class="ui left aligned middle aligned segment">
-        <h3 class="ui header">
-          {{title}}
-        </h3>
-        <p>
-          {{#if songs}}
-          <p>
-            Total songs: {{songs.length}}
-            </p>
-            <a href="/playlist/{{id}}">
-          <i class="icon folder open outline black"></i>
-        </a>
-          {{else}}
-            Empty playlist!
-          {{/if}}
-        </p>
-      </section>
-    {{/each}}
-
-</section>
+{{> listplaylists}}
+{{> addplaylist}}
 
