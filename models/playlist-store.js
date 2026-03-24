@@ -14,6 +14,11 @@ const playlistStore = {
   getAllPlaylists() {
     return this.store.findAll(this.collection);
   },
+  searchPlaylist(search) {
+    return this.store.findBy(this.collection, (playlist) =>
+      playlist.title.toLowerCase().includes(search.toLowerCase()),
+    );
+  },
 
   getPlaylist(id) {
     return this.store.findOneBy(

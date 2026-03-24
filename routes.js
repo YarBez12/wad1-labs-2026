@@ -8,10 +8,12 @@ import start from "./controllers/start.js";
 import dashboard from "./controllers/dashboard.js";
 import about from "./controllers/about.js";
 import playlist from "./controllers/playlist.js";
+import stats from "./controllers/stats.js";
 
 router.get("/", start.createView);
 router.get("/dashboard", dashboard.createView);
 router.get("/about", about.createView);
+router.get("/stats", stats.createView);
 router.get("/playlist/:id", playlist.createView);
 
 router.post("/playlist/:id/addsong", playlist.addSong);
@@ -20,6 +22,9 @@ router.post('/playlist/:id/updatesong/:songid', playlist.updateSong);
 
 router.get("/playlist/:id/deletesong/:songid", playlist.deleteSong);
 router.get('/dashboard/deleteplaylist/:id', dashboard.deletePlaylist);
+router.get('/searchCategory', dashboard.createView);
+router.get('/sortData', dashboard.createView);
+
 
 router.get("/error", (request, response) =>
   response.status(404).end("Page not found."),
