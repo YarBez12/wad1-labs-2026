@@ -1,22 +1,40 @@
-'use strict'
+"use strict";
 
-import express from 'express';
-import router from './routes.js'
+import express from "express";
+import router from "./routes.js";
 import logger from "./utils/logger.js";
-import { create } from 'express-handlebars';
+import { create } from "express-handlebars";
 import bodyParser from "body-parser";
 
 const app = express();
 const port = 3000;
 
 app.use(express.static("public"));
-app.use(bodyParser.urlencoded({ extended: false, }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-const handlebars = create({extname: '.hbs'});
-app.engine('.hbs', handlebars.engine);
+const handlebars = create({
+  extname: ".hbs",
+  helpers: {
+    uppercase: (inputString) => inputString.toUpperCase(),
+    formatDate: (date) => {
+      let dateCreated = new Date(date);
+      let options = {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "2-digit",
+      };
+      return `${dateCreated.toLocaleDateString("en-IE", options)}`;
+    },
+    highlightPopular: (rating) => {
+      let message = rating >= 4 ? "Popular with listeners!" : "";
+      return message;
+    }
+  },
+});
+app.engine(".hbs", handlebars.engine);
 app.set("view engine", ".hbs");
 
 app.use("/", router);
 
-
-app.listen(port, () => logger.info(`Express app running on port ${port}!`))
+app.listen(port, () => logger.info(`Express app running on port ${port}!`));

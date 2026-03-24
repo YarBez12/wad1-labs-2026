@@ -12,3 +12,17 @@ body {
   margin: 2em;
   background-color: lightgrey;
 }
+
+input[type="range"] {
+  width: 100%;
+}
+
+.editSubmit {
+  border:none;
+  background: none;
+}
+
+.hide{
+    display: none;
+}
+

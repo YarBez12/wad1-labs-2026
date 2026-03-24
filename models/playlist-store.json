@@ -6,7 +6,7 @@
       "songs": [
         {
           "id": "04",
-          "title": "Piano Sonata No. 3",
+          "title": "Piano Sonata No. 1",
           "artist": "Beethoven"
         },
         {
@@ -24,7 +24,8 @@
           "title": "New song",
           "artist": "New artist"
         }
-      ]
+      ],
+      "rating": 5
     },
     {
       "id": "02",
@@ -45,11 +46,62 @@
           "title": "Piano Concerto No. 6",
           "artist": "Beethoven"
         }
-      ]
+      ],
+      "rating": 2
     },
     {
       "id": "03",
       "title": "Beethoven Unfinished Symphonies",
+      "songs": [],
+      "rating": 3
+    },
+    {
+      "id": "a35e762b-28b1-4271-9e7e-73622650342a",
+      "title": "new",
+      "date": "2026-03-24T08:41:02.883Z",
+      "songs": [],
+      "rating": 4
+    },
+    {
+      "id": "7e719261-cd11-4de2-96c9-1abc73cfca47",
+      "title": "new2",
+      "rating": 4,
+      "date": "2026-03-24T08:59:00.077Z",
+      "songs": []
+    },
+    {
+      "id": "8554bb16-daf5-4876-ad27-6f54e1078c90",
+      "title": "new3",
+      "rating": 2,
+      "date": "2026-03-24T08:59:05.214Z",
+      "songs": []
+    },
+    {
+      "id": "7290edb6-5dc8-4f61-a77a-be5427d2aabe",
+      "title": "newe5",
+      "rating": 3,
+      "date": "2026-03-24T08:59:08.218Z",
+      "songs": []
+    },
+    {
+      "id": "dd40411e-8280-45d6-ad8f-9e015105c647",
+      "title": "nnn",
+      "rating": 5,
+      "date": "2026-03-24T08:59:14.200Z",
+      "songs": []
+    },
+    {
+      "id": "2a3550dd-559c-4add-b2f3-58f7c111652b",
+      "title": "n",
+      "rating": 1,
+      "date": "2026-03-24T08:59:17.022Z",
+      "songs": []
+    },
+    {
+      "id": "52527a68-65d5-4bb7-ba2d-b5f9f989fb17",
+      "title": "new3",
+      "rating": 4,
+      "date": "2026-03-24T11:30:21.773Z",
       "songs": []
     }
   ]
